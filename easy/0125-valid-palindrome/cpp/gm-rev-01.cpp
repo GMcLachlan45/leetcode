@@ -1,3 +1,5 @@
+// Runtime 4ms
+// Memory 7.3MB
 class Solution {
 public:
     bool isPalindrome(string s) {
