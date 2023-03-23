@@ -11,9 +11,9 @@ To submit a solution, it must have passed the daily question, and as a verificat
 
 Once ready to submit, please put it in the appropriate location folders, with the file being named with your initals and revision number.
 
-It's assumed that your first blind attempt and success at the problem in a language is revision 01, and any subsequent revisions would be numbered 02, 03... etc. 
+It's assumed that your first blind attempt and success at the problem in a language is revision 00, and any subsequent revisions would be numbered 01, 02, 03... etc. 
 
-For example, Jon Doe submitting a Python solution to the medium Question 0 - "example" would put his file in `\medium\0000-example\python\jd-rev-01.py`
+For example, Jon Doe submitting a Python solution to the medium Question 0 - "example" would put his file in `\medium\0000-example\python\jd-rev-00.py`
 
 ### TL;DR
 Put your file in
