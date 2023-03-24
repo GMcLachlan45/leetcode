@@ -1,3 +1,5 @@
+//runtime 15ms
+//memory 26.6MB
 public class Solution {
     public int TotalMoney(int n) {
         int numWeeks = n/7;
