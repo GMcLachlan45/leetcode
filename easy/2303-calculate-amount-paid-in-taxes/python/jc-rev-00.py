@@ -1,3 +1,5 @@
+# Runtime: 51ms
+# Memory: 13.5MB
 class Solution(object):
     def calculateTax(self, brackets, income):
         """
