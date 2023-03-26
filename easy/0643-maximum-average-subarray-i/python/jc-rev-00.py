@@ -1,4 +1,4 @@
-# runtime: 908ms
+# runtime: 897ms
 # memory: 22.8MB
 
 class Solution(object):
@@ -14,6 +14,5 @@ class Solution(object):
         for n in range(1, len(nums) - k + 1):
             ave = ave - nums[n-1] + nums[n+k-1]
             if ave > val:
-                print(ave)
                 val = ave
         return val * 1.00 / k
