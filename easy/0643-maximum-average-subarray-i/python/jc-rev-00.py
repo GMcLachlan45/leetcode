@@ -1,5 +1,6 @@
-# runtime: 914ms
+# runtime: 908ms
 # memory: 22.8MB
+
 class Solution(object):
     def findMaxAverage(self, nums, k):
         """
@@ -8,14 +9,11 @@ class Solution(object):
         :rtype: float
         """
 
-        val = min(nums) * k
         ave = sum(nums[0:k])
-        for n in range(len(nums) - k + 1):
+        val = ave
+        for n in range(1, len(nums) - k + 1):
+            ave = ave - nums[n-1] + nums[n+k-1]
             if ave > val:
+                print(ave)
                 val = ave
-            try:
-                ave = ave - nums[n] + nums[n+k]
-            except:
-                return val * 1.00 / k
-        
-        
+        return val * 1.00 / k
