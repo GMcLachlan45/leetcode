@@ -1,5 +1,5 @@
-# runtime: 16ms
-# memory: 13.2MB
+# runtime: 13ms
+# memory: 13.3MB
 class Solution(object):
     def getMaximumGenerated(self, n):
         """
@@ -13,5 +13,5 @@ class Solution(object):
             if i % 2 == 0:
                 arr.append(arr[i/2])
             else:
-                arr.append(arr[(i-1)/2] + arr[(i+1)/2])
-        return max(arr)
+                arr.append(arr[i/2] + arr[i/2+1])
+        return max(arr[n/2:])
