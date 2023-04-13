@@ -1,3 +1,5 @@
+// Runtime 18ms
+// Memory 7.7MB
 class Solution {
 private:
     int getPos(char c) {
