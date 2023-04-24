@@ -1,5 +1,5 @@
-# runtime: 93ms
-# memory: 13.8MB
+# runtime: 79ms (100%!)
+# memory: 13.7MB
 class Solution(object):
     def luckyNumbers (self, matrix):
         """
@@ -11,5 +11,5 @@ class Solution(object):
         maxes = [max(c) for c in transp]
         mins = [min(r) for r in matrix]
 
-
-        return [x for x in maxes if x in mins]
+        out = [x for x in maxes if x in mins]
+        return out
