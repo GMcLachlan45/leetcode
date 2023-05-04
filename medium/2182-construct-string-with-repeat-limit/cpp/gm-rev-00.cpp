@@ -1,5 +1,5 @@
 // Runtime 150ms
-// Memory 20.1mb
+// Memory 20.1MB
 class Solution {
 public:
     string repeatLimitedString(string s, int repeatLimit) {
