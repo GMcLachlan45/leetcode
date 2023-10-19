@@ -1,3 +1,5 @@
+// Runtime 425ms
+// Memory 274.5MB
 class Solution {
 public:
     int minimumTime(int n, vector<vector<int>>& relations, vector<int>& time) {
