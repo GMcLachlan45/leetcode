@@ -1,23 +1,24 @@
-# Leetcode Solutions
-Daily Leetcode Solutions in multiple languages, by multiple people.
+# Coding Challenge Solutions
+Daily Leetcode Solutions, and other coding challenges, in multiple languages, by multiple people.
 
 ## Goals
 There are three main goals of this repo and its tools:
 1. To hold people accountable to completing a daily Leetcode question
-2. To keep people up to date with the basics of algorithms and data strutures go off into the real world of software development
+2. To keep people up to date with the basics of algorithms and data strutures, hopefully useful in the real world of software development
 3. To have fun >:]
 
-May be expanded to tackling other coding/hacking problems like the Advent of Code if/when that's desired.
 
 ## Submission
 ### Content Format
 There's no particular coding format to be followed, but as this is practice for real life development, try to use the best practice within your chosen language.
 
+As time goes on, there may be linters added to follow a particular style, just for consistency.
+
 ### Submission Format
 To submit a solution, it must have passed the daily question, and as a verification, please add the runtime and memory usage in 2 comments at the top as follows:
 ```python
-# Runtime: ##ms
-# Memory: ##MB
+# Runtime ##ms
+# Memory ##MB
 ... your code here ...
 ```
 
@@ -27,13 +28,13 @@ It's assumed that your first attempt and success at the problem in a language is
 
 You're allowed to make changes to your final solution before you submit it (in case you forgot to remove "print" statements, or think you can improve it). 
 
-For example, Jon Doe submitting a Python solution to the medium Question 0 - "example" would put his file in 
+For example, Jon Doe submitting a Python solution to the medium Leetcode Question 0 - "example" would put his file in 
 
-`\medium\0000-example\python\jd-rev-00.py`
+`.\leetcode\medium\0000-example\python\jd-rev-00.py`
 
 ### TL;DR
-Put your file in
-```\[difficulty]\[###-question-name]\[lang]\[initials]-rev-[##].[lang extension]```
+For Leetcode solutions, put the file in
+```./leetcode\[difficulty]\[###-question-name]\[lang]\[initials]-rev-[##].[lang extension]```
 with 2 comments with runtime and memory usage if you want.
 
 Don't be needlessly uncooperative, please.
