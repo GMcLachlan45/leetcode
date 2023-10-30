@@ -7,7 +7,7 @@ public:
             if(std::bitset<14>(a).count() == std::bitset<14>(b).count())
                 return a < b;
             return std::bitset<14>(a).count() < std::bitset<14>(b).count();
-        });PP
+        });
         return arr;
     }
 };
