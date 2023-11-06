@@ -1,3 +1,5 @@
+// Runtime: 2354ms
+// Memory: 442.5MB
 class SeatManager {
     std::stack<int> seats;
 public:
