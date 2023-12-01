@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 // A helper function to easily read the player's input
 #include "../../../bin/input-reader.cpp"
 int main() {
