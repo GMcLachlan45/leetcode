@@ -56,6 +56,6 @@ int main() {
     // Passed
 //    std::cout << "Solution 1: The sum of the calibration values is "<<calibration<<std::endl;
     // Passed...
-    std::cout << "Solution 2: The sum of the REAL calibration values is"<<calibration<<std::endl;
+    std::cout << "Solution 2: The sum of the REAL calibration values is "<<calibration<<std::endl;
     return 0;
 }
