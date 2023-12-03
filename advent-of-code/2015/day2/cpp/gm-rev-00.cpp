@@ -4,8 +4,8 @@
 #include <vector>
 #include "../../../bin/input-reader.cpp"
 
-int main() {
-    std::string input = readInput()+'\n';
+int main(int argc, char* argv[]) {
+    std::string input = readInput(argv[1])+'\n';
     int numberStart = 0;
     int totalPaper = 0;
     int totalRibbon = 0;

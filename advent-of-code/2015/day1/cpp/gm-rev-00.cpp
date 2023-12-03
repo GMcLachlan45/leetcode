@@ -2,9 +2,9 @@
 #include <iostream>
 // A helper function to easily read the player's input
 #include "../../../bin/input-reader.cpp"
-int main() {
+int main(int argc, char* argv[]) {
     std::cout<< "Hello AoC 2015!"<< std::endl;
-    std::string input= readInput();
+    std::string input= readInput(argv[1]);
     int floor = 0;
     int firstBasement = -1;
     for(int i = 0; i < input.size(); i++) {

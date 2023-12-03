@@ -30,9 +30,9 @@ char findDigit(std::string in) {
 }
 
 
-int main() {
+int main(int argc, char* argv[]) {
     std::cout << "Hello AoC 2023!" << std::endl;
-    std::vector<std::string> inputs = readInputs();
+    std::vector<std::string> inputs = readInputs(argv[1]);
     int calibration = 0;
     for(std::string input : inputs) {
         char firstNumber = 0;

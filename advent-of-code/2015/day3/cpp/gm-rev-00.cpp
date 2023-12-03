@@ -3,8 +3,8 @@
 #include <unordered_set>
 #include "../../../bin/input-reader.cpp"
 
-int main() {
-    std::string input = readInput();
+int main(int argc, char* argv[]) {
+    std::string input = readInput(argv[1]);
     // Positions for just Santa,and Santa and Robo-Santa respectively
     int x, y, sx, sy, rx, ry = 0;
     // The houses visited when it's just Santa starting with 0,0

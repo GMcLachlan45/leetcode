@@ -3,13 +3,12 @@
 #include <vector>
 #include "../../../bin/input-reader.cpp"
 #include <cctype>
-int main() {
-    std::vector<std::string> inputs = readInputs();
+int main(int argc, char* argv[]) {
+    std::vector<std::string> inputs = readInputs(argv[1]);
     // array with the elf's requested red, green and blue cubes
     int maxColors[] = {12,13,14};
-    int possibleGames = 0;
-
-    int cubePowerSum = 0;
+    long long possibleGames = 0;
+    long long cubePowerSum = 0;
     for(int i = 0; i < inputs.size(); i++) {
         bool pastColon = false;
         bool gamePossible = true;
