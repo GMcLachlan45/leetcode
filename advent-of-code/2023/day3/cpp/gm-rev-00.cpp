@@ -74,9 +74,10 @@ int main(int argc, char* argv[]) {
                 }
             }
         }
-
     }
+    // Passed
     std::cout << "Solution 1: the sum of all the part numbers is " << sum <<std::endl;
+    // Passed
     std::cout << "Solution 2: the sum of the gear ratios is " << ratioSum <<std::endl;
     return 0;
 }
