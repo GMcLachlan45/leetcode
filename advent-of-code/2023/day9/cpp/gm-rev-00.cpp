@@ -7,15 +7,15 @@
 #include <cctype>
 #include <numeric>
 
-std::vector<int> getNums(std::string in) {
-    std::vector<int> vec;
+std::vector<long> getNums(std::string in) {
+    std::vector<long> vec;
     std::string num ="";
     for(char c: in) {
         if(std::isdigit(c) || c =='-')
             num += c;
         else{
             if(num!="")
-                vec.push_back(std::stoi(num));
+                vec.push_back(std::stol(num));
             num = "";
         }
     }
@@ -24,34 +24,34 @@ std::vector<int> getNums(std::string in) {
 }
 
 int main(int argc, char* argv[]) {
-    std::vector<std::vector<int>> input;
+    std::vector<std::vector<long>> input;
     for(std::string st : readInputs(argv[1])) {
         input.push_back(getNums(st));
     }
-    int sum = 0;
-    int sum2 = 0;
+    long sum = 0;
+    long sum2 = 0;
 
-    for(std::vector<int> in : input) {
+    for(std::vector<long> in : input) {
         bool again = true;
-        std::vector<std::vector<int>> info;
+        std::vector<std::vector<long>> info;
         info.push_back(in);
 
         bool allZero = false;
         while(!allZero) {
             allZero = true;
             info.push_back({});
-            for(int i = 1; i < info[info.size()-2].size(); i++) {
+            for(long i = 1; i < info[info.size()-2].size(); i++) {
                 info[info.size()-1].push_back(info[info.size()-2][i]-info[info.size()-2][i-1]);
                 allZero = allZero && info[info.size()-1][i-1] == 0;
             }
         }
 
         info[info.size()-1].push_back(0);
-        for(int b = info.size()-1; b > 0; b--)
+        for(long b = info.size()-1; b > 0; b--)
             info[b-1].push_back(info[b][info[b].size()-1] + info[b-1][info[b-1].size()-1]);
         info[info.size()-1].push_back(0);
         sum+= info[0][info[0].size()-1];
-        for(int b = info.size()-1; b > 0; b--)
+        for(long b = info.size()-1; b > 0; b--)
             info[b-1].push_back(-info[b][info[b].size()-1] + info[b-1][0]);
         sum2+= info[0][info[0].size()-1];
 
