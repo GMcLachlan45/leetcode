@@ -26,9 +26,9 @@ Once ready to submit, please put it in the appropriate location folders, with th
 
 It's assumed that your first attempt and success at the problem in a language is revision 00, and any subsequent revisions would be numbered 01, 02, 03... etc.
 
-You're allowed to make changes to your final solution before you submit it (in case you forgot to remove "print" statements, or think you can improve it). 
+You're allowed to make changes to your final solution before you submit it (in case you forgot to remove "print" statements, or think you can improve it).
 
-For example, Jon Doe submitting a Python solution to the medium Leetcode Question 0 - "example" would put his file in 
+For example, Jon Doe submitting a Python solution to the medium Leetcode Question 0 - "example" would put his file in
 
 `.\leetcode\medium\0000-example\python\jd-rev-00.py`
 
@@ -44,4 +44,4 @@ Don't be needlessly uncooperative, please.
 - By submitting to this repo you agree that you're a pretty awesome person
 - There may be a bot made in the future that scrapes the repo's files to post to a webpage hosted at [the owner's website](https://www.ontothenorth.com)
   - If you want to help with that please let me know
-- We won't be checking if the solution actually passes, or if the statistics you provide are truthful but you're only hurting yourself if you lie about it working, so just don't.
+- We won't be checking if the solution actually passes, or if the statistics you provide are truthful but you're only hurting yourself if you lie about it working.
