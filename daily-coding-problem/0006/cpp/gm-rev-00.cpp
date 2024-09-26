@@ -53,18 +53,17 @@ public:
         }
         ListNode* ptr = head;
         ListNode* prev = nullptr;
-        std::cout<<"null";
         while(ptr) {
-            std::cout<<"<->"<<ptr->val;
+            std::cout<<ptr->val;
             ListNode* next = (ListNode*) (ptr->both ^ reinterpret_cast<std::uintptr_t>(prev));
             prev = ptr;
             ptr = next;
+            if(ptr)
+                std::cout<<"<->";
         }
-        std::cout<<"<->null"<<std::endl;
-
-        }
-    XorLinkedList(){
-    };
+        std::cout<<std::endl;
+    }
+    XorLinkedList() { };
 };
 
 int main() {
