@@ -44,8 +44,4 @@ int main() {
     std::cout << "And for proof that it's uniform, we repeat "<< k<<" times and get the distribution:"<<std::endl;
     printDistribution(str, k);
 
-    k = 1000000;
-    std::cout << "And for proof that it's uniform, we repeat "<< k<<" times and get the distribution:"<<std::endl;
-    printDistribution(str, k);
-
 }
