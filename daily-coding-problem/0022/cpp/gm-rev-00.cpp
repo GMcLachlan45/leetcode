@@ -7,22 +7,22 @@ class TrieNode {
 public:
     TrieNode* children[128];
     TrieNode() {
-
     }
 };
 
-std::vector<std::string> helper(TrieNode* prefixTrie, std::string s, int front) {
+std::vector<std::string> helper(TrieNode* prefixTrie, std::vector<bool>* deadEnds, std::string s, int front) {
     std::vector<std::string> words = {};
     TrieNode* ptr = prefixTrie;
     int end = front;
     while(end < s.size() && ptr->children[s[end]]) {
         ptr = ptr->children[s[end++]];
-        if(ptr->children['\n']) {
-            words = helper(prefixTrie, s, end);
+        if(ptr->children['\n'] && !deadEnds->at(end)) {
+            words = helper(prefixTrie, deadEnds, s, end);
             if(!words.empty() || end >= s.size()) {
                 words.push_back(s.substr(front, end-front));
                 break;
-            }
+            } else
+                (*deadEnds)[end] = true;
         }
     }
     return words;
@@ -41,8 +41,9 @@ std::vector<std::string> separateIntoWords(std::vector<std::string> dict, std::s
         ptr->children['\n'] = new TrieNode();
     }
 
+    std::vector<bool> deadEnds(s.size() + 1);
 
-    std::vector<std::string> words = helper(prefixTrie, s, 0);
+    std::vector<std::string> words = helper(prefixTrie, &deadEnds, s, 0);
     std::reverse(words.begin(), words.end());
     return words;
 }
@@ -76,7 +77,7 @@ int main() {
         std::cout<<"]"<<std::endl<<std::endl;
     }
 
-    dict = {"bed", "bat", "bedbat", "and", "beyond"};
+    dict = {"bed", "bat", "bedbat", "and", "beyond", "h"};
     s = "bedbathandbeyond";
 
     ret = separateIntoWords(dict, s);
@@ -90,8 +91,8 @@ int main() {
         std::cout<<"]"<<std::endl<<std::endl;
     }
 
-    dict = {"bed", "bat", "bedbat", "and", "beyond"};
-    s = "bedbathandbeyond";
+    dict = {"aa","aaaa","aaaaaa", "aaaaaaaa","aaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"};
+    s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
     ret = separateIntoWords(dict, s);
 
