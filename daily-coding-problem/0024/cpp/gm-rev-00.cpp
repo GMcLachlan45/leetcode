@@ -89,5 +89,4 @@ int main() {
 
               << lbt->lock()<<std::endl
               << lbt->setVal(55)<<std::endl;
-
 }
